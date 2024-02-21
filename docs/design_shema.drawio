@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net" modified="2024-02-20T20:22:05.905Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0" etag="13DGjzzuL6mOTDfq9Q81" version="23.1.5" type="device">
+  <diagram name="Page-1" id="FZBeKfxg1kKs0pA1nfyP">
+    <mxGraphModel dx="1886" dy="892" grid="0" gridSize="10" guides="0" tooltips="0" connect="0" arrows="0" fold="1" page="0" pageScale="1" pageWidth="690" pageHeight="980" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="q4h3m46_ynVAhPZEem_c-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="q4h3m46_ynVAhPZEem_c-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="348" y="331" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="33" y="170" width="630" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-4" value="Lexer" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="33" y="170" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-5" value="Split by newline" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="78" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-6" value="Split by delimiter" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="218" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-7" value="Flat array of rows" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="358" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-8" value="Split each row by spaces" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="498" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-9" value="Get rows in scope of function { ... }" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="291" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-10" value="Get rows in scope of for ...; do ...; done" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="426" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-11" value="Create scope" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="151" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-12" value="Insert variables in scope" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="151" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-13" value="Parse variable value in structure $(..)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="291" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-14" value="Parse commands by pipe splitting" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="426" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-15" value="Parse each command with $(..) strcuture" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="151" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-16" value="Execute command by each line" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="73" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-17" value="Call functions and commands with exec and dup2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="213" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-18" value="Iterate loops" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="353" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="q4h3m46_ynVAhPZEem_c-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="348" y="631" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-19" value="Process linked list of variable hash maps" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="493" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-20" value="Save information about std(out|in) direction (&amp;gt;, &amp;lt;)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="291" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-24" value="String interpolation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="426" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-28" value="Parser" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="28" y="331" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-29" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="33" y="670" width="630" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-30" value="Interpreter" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="28" y="670" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="q4h3m46_ynVAhPZEem_c-41" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="33" y="331" width="630" height="300" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
