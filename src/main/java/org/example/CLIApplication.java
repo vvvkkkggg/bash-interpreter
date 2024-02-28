@@ -9,62 +9,58 @@ import java.util.Scanner;
 
 public class CLIApplication {
 
-  private static final String PROMPT = "> ";
-  private static final String[] EXIT_COMMANDS = {"exit", "quit"};
+    private static final String PROMPT = "> ";
+    private static final String[] EXIT_COMMANDS = {"exit", "quit"};
 
-  private static final Command[] COMMANDS = {
-      new CatCommand(),
-      new LCCommand(),
-      new HelpCommand()
-  };
+    private static final Command[] COMMANDS = {new CatCommand(), new WCCommand(), new HelpCommand(), new EchoCommand()};
 
-  public static String makeCommand(String command) {
-    return command + "command";
-  }
+    public static String makeCommand(String command) {
+        return command + "command";
+    }
 
-  public static void main(String[] args) throws IOException {
-    Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
 
-    System.out.println("Welcome to CLI Application!");
+        System.out.println("Welcome to CLI Application!");
 
-    while (true) {
-      System.out.print(PROMPT);
-      String input = scanner.nextLine();
-      String[] tokens = input.trim().split("\\s+");
+        while (true) {
+            System.out.print(PROMPT);
+            String input = scanner.nextLine();
+            String[] tokens = input.trim().split("\\s+");
 
-      if (tokens.length == 0) {
-        continue;
-      }
+            if (tokens.length == 0) {
+                continue;
+            }
 
-      String commandName = tokens[0];
-      if (shouldExit(commandName)) {
-        break;
-      }
+            String commandName = tokens[0];
+            if (shouldExit(commandName)) {
+                break;
+            }
 
-      boolean commandFound = false;
+            boolean commandFound = false;
 
-      for (Command command : COMMANDS) {
-        if (makeCommand(commandName).equals(command.getClass().getSimpleName().toLowerCase())) {
-          command.execute(tokens);
-          commandFound = true;
-          break;
+            for (Command command : COMMANDS) {
+                if (makeCommand(commandName).equals(command.getClass().getSimpleName().toLowerCase())) {
+                    command.execute(tokens);
+                    commandFound = true;
+                    break;
+                }
+            }
+
+            if (!commandFound) {
+                System.out.println("Command not found. Type 'help' for available commands.");
+            }
         }
-      }
 
-      if (!commandFound) {
-        System.out.println("Command not found. Type 'help' for available commands.");
-      }
+        System.out.println("Exiting CLI Application. Goodbye!");
     }
 
-    System.out.println("Exiting CLI Application. Goodbye!");
-  }
-
-  private static boolean shouldExit(String command) {
-    for (String exitCommand : EXIT_COMMANDS) {
-      if (command.equalsIgnoreCase(exitCommand)) {
-        return true;
-      }
+    private static boolean shouldExit(String command) {
+        for (String exitCommand : EXIT_COMMANDS) {
+            if (command.equalsIgnoreCase(exitCommand)) {
+                return true;
+            }
+        }
+        return false;
     }
-    return false;
-  }
 }
