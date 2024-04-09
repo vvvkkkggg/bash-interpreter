@@ -12,7 +12,6 @@ public class CLIApplication {
     private static final Set<String> EXIT_COMMANDS;
 
     private static final HashMap<String, Command> COMMANDS;
-
     static class Result {
         String msg;
         Boolean isTerminal;
@@ -30,6 +29,8 @@ public class CLIApplication {
         COMMANDS.put("wc", new WCCommand());
         COMMANDS.put("echo", new EchoCommand());
         COMMANDS.put("help", new HelpCommand());
+        COMMANDS.put("ls", new LsCommand());
+        COMMANDS.put("cd", new CdCommand());
     }
 
     public static void main(String[] args) throws IOException {
