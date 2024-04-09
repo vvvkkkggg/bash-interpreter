@@ -18,7 +18,7 @@ public class LsCommand implements Command {
         if (args.size() == 2) {
             currentDir = new File(args.get(1));
         } else {
-            currentDir = new File(System.getProperty(CLIApplication.currentDir));
+            currentDir = new File(System.getProperty("user.dir"));
         }
 
         File[] files = currentDir.listFiles();
