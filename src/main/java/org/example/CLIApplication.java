@@ -12,8 +12,28 @@ public class CLIApplication {
     private static final String PROMPT = "> ";
     private static final String[] EXIT_COMMANDS = {"exit", "quit"};
 
-    private static final Command[] COMMANDS = {new CatCommand(), new WCCommand(), new HelpCommand(), new EchoCommand()};
+    private static final HashMap<String, Command> COMMANDS;
+    static class Result {
+        String msg;
+        Boolean isTerminal;
+    }
 
+    static {
+        EXIT_COMMANDS = new HashSet<>();
+        EXIT_COMMANDS.add("exit");
+        EXIT_COMMANDS.add("quit");
+
+        COMMANDS = new HashMap<>();
+        COMMANDS.put("cat", new CatCommand());
+        COMMANDS.put("exit", new ExitCommand());
+        COMMANDS.put("quit", new ExitCommand());
+        COMMANDS.put("wc", new WCCommand());
+        COMMANDS.put("echo", new EchoCommand());
+        COMMANDS.put("help", new HelpCommand());
+        COMMANDS.put("ls", new LsCommand());
+        COMMANDS.put("cd", new CdCommand());
+    }
+  
     public static String makeCommand(String command) {
         return command + "command";
     }
